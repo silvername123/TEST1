@@ -5,10 +5,13 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import Anmation from './anmation/anmation.vue'
 </script>
 
 <template>
   <div>1111111111111111111111111</div>
+  <Anmation></Anmation>
+  <div>2222</div>
   <!-- <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
