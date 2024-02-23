@@ -57,7 +57,50 @@
 
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+  <!-- <script type="module" src="/src/main.ts"></script> -->
+  <script lang="javascript">
+    class student {
+      constructor() {
+        // console.log('d')
+        this.status = '无'
+        this.data = []
+      }
+      add(p) {
+        this.data.push(p)
+      }
+      setStatus(n) {
+        this.status = n
+        this.notify(this)
+      }
+
+      getStatus() {
+        return this.status
+      }
+      notify() {
+        this.data.forEach((p) => {
+          p.update(this)
+        })
+      }
+
+    }
+    class parent {
+      constructor(name) {
+        this.name = name
+      }
+      update(n) {
+        console.log(this.name + '获取到的状态' + n.getStatus())
+      }
+    }
+
+    var s = new student()
+    var p = new parent('小明')
+    var p1 = new parent('小红')
+
+    s.add(p)
+    s.add(p1)
+
+    s.setStatus('失望')
+  </script>
 </body>
 
 </html>
